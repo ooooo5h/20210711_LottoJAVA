@@ -29,9 +29,34 @@ public class MainDrive {
 			}
 		}
 		
-//		for(int num : lottoNumbers) {
-//			System.out.println(num);
-//		}   => 코드 맞게 짰나 모르나 확인용
+		
+		
+		for(int num : lottoNumbers) {
+			System.out.println(num);
+		}
+		
+		int bonusNum = 0;
+		
+		while(true) {
+			
+			int randomNum = (int)(Math.random()*45+1);
+			
+			boolean isDuplicateOk = true;
+			
+			for(int num : lottoNumbers) {
+				if(num == randomNum) {
+					isDuplicateOk = false;
+					break;
+				}
+			}
+			
+			if(isDuplicateOk) {
+				bonusNum = randomNum;
+				break;
+			}			
+		}
+		
+		System.out.println("보너스번호 : " + bonusNum);
 		
 		int[] myLottoNumbers = new int[6];
 		
