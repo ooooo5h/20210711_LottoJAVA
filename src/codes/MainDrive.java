@@ -6,6 +6,33 @@ public class MainDrive {
 	
 	public static void main(String[] args) {
 		
+		int[] lottoNumbers = new int[6];
+		
+		for(int i = 0 ; i < lottoNumbers.length; i++) {
+			
+			while(true) {
+				
+				int lottoNumber = (int)(Math.random()*45+1);
+				
+				boolean isDuplicateOk = true;
+				
+				for(int num : lottoNumbers) {
+					if(num == lottoNumber) {
+						isDuplicateOk = false;
+						break;
+					}
+				}
+				if(isDuplicateOk) {
+					lottoNumbers[i] = lottoNumber;
+					break;
+				}	
+			}
+		}
+		
+//		for(int num : lottoNumbers) {
+//			System.out.println(num);
+//		}   => 코드 맞게 짰나 모르나 확인용
+		
 		int[] myLottoNumbers = new int[6];
 		
 		Scanner myScan = new Scanner(System.in);
@@ -39,30 +66,6 @@ public class MainDrive {
 					System.out.println("범위안의 숫자를 입력하세요.");
 				}
 			}		
-		}
-		
-		
-		int[] lottoNumbers = new int[6];
-		
-		for(int i = 0 ; i < lottoNumbers.length; i++) {
-			
-			while(true) {
-				
-				int lottoNumber = (int)(Math.random()*45+1);
-				
-				boolean isDuplicateOk = true;
-				
-				for(int num : lottoNumbers) {
-					if(num == lottoNumber) {
-						isDuplicateOk = false;
-						break;
-					}
-				}
-				if(isDuplicateOk) {
-					lottoNumbers[i] = lottoNumber;
-					break;
-				}	
-			}
 		}
 		
 		int sameNumberCount = 0;
