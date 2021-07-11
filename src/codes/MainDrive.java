@@ -31,7 +31,13 @@ public class MainDrive {
 				if(isDupliOk && isRangeOk) {
 					myLottoNumbers[i] = inputNumber;
 					break;
-				}				
+				}	
+				else if(!isDupliOk) {
+					System.out.println("중복된 숫자입니다.");
+				}
+				else {
+					System.out.println("범위안의 숫자를 입력하세요.");
+				}
 			}		
 		}
 	}
