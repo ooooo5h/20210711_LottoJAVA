@@ -29,8 +29,20 @@ public class MainDrive {
 			}
 		}
 		
-		
-		
+//		버블솔트
+//		2,67,1,23,5,11 자리 비교..
+//		i랑 i+1 비교하는게 작은 반복 = j
+//		6번 반복하는데 큰 반복 = i
+		for(int i = 0 ; i < lottoNumbers.length; i++) {
+			for(int j = 0 ; j < lottoNumbers.length-1 ; j++) {
+				if(lottoNumbers[j] > lottoNumbers[j+1]) {
+					int backUp = lottoNumbers[j+1];
+					lottoNumbers[j+1] = lottoNumbers[j];
+					lottoNumbers[j] = backUp;
+				}
+			}
+		}
+	
 		for(int num : lottoNumbers) {
 			System.out.println(num);
 		}
