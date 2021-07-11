@@ -119,7 +119,22 @@ public class MainDrive {
 			System.out.println("1등");
 		}
 		else if(sameNumberCount==5) {
-			System.out.println("3등");
+			
+			boolean isbonusCorrect = false;
+			for(int num : myLottoNumbers) {
+				if(num == bonusNum) {
+					isbonusCorrect = true;
+					break;
+				}
+			}
+			
+			if(isbonusCorrect) {
+				System.out.println("2등");
+			}
+			else {
+				System.out.println("3등");
+			}
+		
 		}
 		else if(sameNumberCount==4) {
 			System.out.println("4등");
